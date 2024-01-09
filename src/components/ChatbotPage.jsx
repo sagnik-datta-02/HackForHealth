@@ -46,7 +46,7 @@ function ChatBotApp() {
   const chatContainerRef = useRef(null);
   const [phoneNumber, setPhoneNumber] = useState('');
   const [selectedLanguage, setSelectedLanguage] = useState('');
-
+  const navigate= useNavigate();
   const fetchTranslatedQuestions = () => {
     const requestBody = {
       "questions": ques,
@@ -175,7 +175,7 @@ function ChatBotApp() {
         <Button
           variant="outlined"
           color="primary"
-          onClick={() => useNavigate("/")} 
+          onClick={() => navigate("/")} 
         >
           Go to Home
         </Button>
