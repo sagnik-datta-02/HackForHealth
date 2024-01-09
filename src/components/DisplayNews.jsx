@@ -11,14 +11,21 @@ const NewsDisplay = () => {
   useEffect(() => {
     fetchNews();
   }, []);
-const API_KEY=import.meta.env.VITE_SOME_KEY;
+
+  const API_KEY = import.meta.env.VITE_SOME_KEY;
+
   const fetchNews = async () => {
     try {
-     const API='https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=';
-     
-      const response = await axios.get(`https://newsapi.org/v2/everything?q="support mental health"&searchIn=title,description&pageSize=3&apiKey=${API_KEY}`);
-      setNews(response.data.articles); 
-      console.log(response.data.articles)
+      const apiUrl = 'https://newsapi.org/v2/everything?q="support mental health"&searchIn=title,description&pageSize=3';
+
+      const response = await axios.get(apiUrl, {
+        headers: {
+          'X-Api-Key': API_KEY,
+        },
+      });
+
+      setNews(response.data.articles);
+      console.log(response.data.articles);
     } catch (error) {
       console.error('Error fetching news:', error);
     }
@@ -27,18 +34,19 @@ const API_KEY=import.meta.env.VITE_SOME_KEY;
   return (
     <Container maxWidth='lg'>
       <Typography variant="h4"
-           style={{
-            margin:'20px' ,
-             color: '#242424',
-             fontSize: { xs: '32px', sm: '64px' },
-             fontFamily: 'Anek Telugu',
-             fontWeight: '600',
-             textTransform: 'capitalize',
-             textAlign: 'center',
-             lineHeight: { xs: 1.5, sm: '79.36' },
-             letterSpacing: '0.13',
-             wordWrap: 'break-word'}}>
-        Latest News on Mental Health 
+                  style={{
+                    margin: '20px',
+                    color: '#242424',
+                    fontSize: { xs: '32px', sm: '64px' },
+                    fontFamily: 'Anek Telugu',
+                    fontWeight: '600',
+                    textTransform: 'capitalize',
+                    textAlign: 'center',
+                    lineHeight: { xs: 1.5, sm: '79.36' },
+                    letterSpacing: '0.13',
+                    wordWrap: 'break-word',
+                  }}>
+        Latest News on Mental Health
       </Typography>
       <Grid container spacing={2}>
         {news.map((article, index) => (
