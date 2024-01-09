@@ -18,14 +18,14 @@ function ChatBotApp() {
 "How satisfied are you with things you used to enjoy?",
 //"How often do you feel guilty?"
 //,"Do you feel like you're being punished?"
-,"How do you feel about yourself?"
+"How do you feel about yourself?"
 //,"Do you blame yourself for things?"
-,"Do you have thoughts about living a long life?"
+//"Do you have thoughts about living a long life?"
 //,"How often do you cry?"
 ,"How are you behaving with others usually nowadays?"
 //,"Have you lost interest in other people?"
 ,"How well can you make decisions?"
-,"What do you feel about your appearance?"
+,"What do you feel about your demeanor?"
 //,"How well can you work compared to before?"
 //,"How well are you sleeping?"
 //,"Do you feel more tired than usual?"
@@ -196,27 +196,27 @@ function ChatBotApp() {
 <MenuItem value="hy">Armenian</MenuItem>
 <MenuItem value="az">Azerbaijani</MenuItem>
 <MenuItem value="eu">Basque</MenuItem>
-<MenuItem value="be">Belarusian</MenuItem>
+<MenuItem value="ba">Bashkir</MenuItem>
 <MenuItem value="bn">Bengali</MenuItem>
+<MenuItem value="bho">Bhojpuri</MenuItem>
 <MenuItem value="bs">Bosnian</MenuItem>
 <MenuItem value="bg">Bulgarian</MenuItem>
 <MenuItem value="ca">Catalan</MenuItem>
-<MenuItem value="ceb">Cebuano</MenuItem>
-<MenuItem value="ny">Chichewa</MenuItem>
+<MenuItem value="yue">Cantonese</MenuItem>
 <MenuItem value="zh-Hans">Chinese (Simplified)</MenuItem>
 <MenuItem value="zh-Hant">Chinese (Traditional)</MenuItem>
-<MenuItem value="co">Corsican</MenuItem>
 <MenuItem value="hr">Croatian</MenuItem>
 <MenuItem value="cs">Czech</MenuItem>
 <MenuItem value="da">Danish</MenuItem>
+<MenuItem value="prs">Dari</MenuItem>
+<MenuItem value="dv">Divehi</MenuItem>
 <MenuItem value="nl">Dutch</MenuItem>
 <MenuItem value="en">English</MenuItem>
-<MenuItem value="eo">Esperanto</MenuItem>
 <MenuItem value="et">Estonian</MenuItem>
-<MenuItem value="tl">Filipino</MenuItem>
+<MenuItem value="fil">Filipino</MenuItem>
 <MenuItem value="fi">Finnish</MenuItem>
 <MenuItem value="fr">French</MenuItem>
-<MenuItem value="fy">Frisian</MenuItem>
+<MenuItem value="fj">Fijian</MenuItem>
 <MenuItem value="gl">Galician</MenuItem>
 <MenuItem value="ka">Georgian</MenuItem>
 <MenuItem value="de">German</MenuItem>
@@ -224,10 +224,9 @@ function ChatBotApp() {
 <MenuItem value="gu">Gujarati</MenuItem>
 <MenuItem value="ht">Haitian Creole</MenuItem>
 <MenuItem value="ha">Hausa</MenuItem>
-<MenuItem value="haw">Hawaiian</MenuItem>
-<MenuItem value="iw">Hebrew</MenuItem>
+<MenuItem value="he">Hebrew</MenuItem>
 <MenuItem value="hi">Hindi</MenuItem>
-<MenuItem value="hmn">Hmong</MenuItem>
+<MenuItem value="mww">Hmong Daw</MenuItem>
 <MenuItem value="hu">Hungarian</MenuItem>
 <MenuItem value="is">Icelandic</MenuItem>
 <MenuItem value="ig">Igbo</MenuItem>
@@ -235,8 +234,8 @@ function ChatBotApp() {
 <MenuItem value="ga">Irish</MenuItem>
 <MenuItem value="it">Italian</MenuItem>
 <MenuItem value="ja">Japanese</MenuItem>
-<MenuItem value="jw">Javanese</MenuItem>
 <MenuItem value="kn">Kannada</MenuItem>
+<MenuItem value="ks">Kashmiri</MenuItem>
 <MenuItem value="kk">Kazakh</MenuItem>
 <MenuItem value="km">Khmer</MenuItem>
 <MenuItem value="rw">Kinyarwanda</MenuItem>
@@ -244,10 +243,8 @@ function ChatBotApp() {
 <MenuItem value="ku">Kurdish (Kurmanji)</MenuItem>
 <MenuItem value="ky">Kyrgyz</MenuItem>
 <MenuItem value="lo">Lao</MenuItem>
-<MenuItem value="la">Latin</MenuItem>
 <MenuItem value="lv">Latvian</MenuItem>
 <MenuItem value="lt">Lithuanian</MenuItem>
-<MenuItem value="lb">Luxembourgish</MenuItem>
 <MenuItem value="mk">Macedonian</MenuItem>
 <MenuItem value="mg">Malagasy</MenuItem>
 <MenuItem value="ms">Malay</MenuItem>
@@ -255,11 +252,11 @@ function ChatBotApp() {
 <MenuItem value="mt">Maltese</MenuItem>
 <MenuItem value="mi">Maori</MenuItem>
 <MenuItem value="mr">Marathi</MenuItem>
-<MenuItem value="mn">Mongolian</MenuItem>
+<MenuItem value="mn-Mong">Mongolian(Traditional)</MenuItem>
 <MenuItem value="my">Burmese</MenuItem>
 <MenuItem value="ne">Nepali</MenuItem>
-<MenuItem value="no">Norwegian</MenuItem>
-<MenuItem value="ny">Chichewa</MenuItem>
+<MenuItem value="nb">Norwegian</MenuItem>
+<MenuItem value="nya">Nyanja</MenuItem>
 <MenuItem value="or">Odia</MenuItem>
 <MenuItem value="ps">Pashto</MenuItem>
 <MenuItem value="fa">Persian</MenuItem>
@@ -270,9 +267,8 @@ function ChatBotApp() {
 <MenuItem value="ru">Russian</MenuItem>
 <MenuItem value="sm">Samoan</MenuItem>
 <MenuItem value="gd">Scots Gaelic</MenuItem>
-<MenuItem value="sr">Serbian</MenuItem>
+<MenuItem value="sr-Latn">Serbian-Latin</MenuItem>
 <MenuItem value="st">Sesotho</MenuItem>
-<MenuItem value="sn">Shona</MenuItem>
 <MenuItem value="sd">Sindhi</MenuItem>
 <MenuItem value="si">Sinhala</MenuItem>
 <MenuItem value="sk">Slovak</MenuItem>
@@ -282,7 +278,7 @@ function ChatBotApp() {
 <MenuItem value="su">Sundanese</MenuItem>
 <MenuItem value="sw">Swahili</MenuItem>
 <MenuItem value="sv">Swedish</MenuItem>
-<MenuItem value="tg">Tajik</MenuItem>
+<MenuItem value="bo">Tibetian</MenuItem>
 <MenuItem value="ta">Tamil</MenuItem>
 <MenuItem value="te">Telugu</MenuItem>
 <MenuItem value="th">Thai</MenuItem>
@@ -294,7 +290,6 @@ function ChatBotApp() {
 <MenuItem value="vi">Vietnamese</MenuItem>
 <MenuItem value="cy">Welsh</MenuItem>
 <MenuItem value="xh">Xhosa</MenuItem>
-<MenuItem value="yi">Yiddish</MenuItem>
 <MenuItem value="yo">Yoruba</MenuItem>
 <MenuItem value="zu">Zulu</MenuItem>
 
