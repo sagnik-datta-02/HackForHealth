@@ -13,7 +13,7 @@ function ChatBotApp() {
     //'What is your favorite color?',
     //'Tell me about your day.',
     "Are you feeling happy or sad? How often u feel so?",
-"What do you think about future?"
+"What do you think about future?",
 "Do you feel like a winner?",
 "How satisfied are you with things you used to enjoy?",
 //"How often do you feel guilty?"
