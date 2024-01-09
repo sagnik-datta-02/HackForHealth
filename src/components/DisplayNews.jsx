@@ -12,20 +12,16 @@ const NewsDisplay = () => {
     fetchNews();
   }, []);
 
-  const API_KEY = import.meta.env.VITE_SOME_KEY;
+  
 
   const fetchNews = async () => {
     try {
-      const apiUrl = 'https://newsapi.org/v2/everything?q="support mental health"&searchIn=title,description&pageSize=3';
+      const apiUrl = 'https://health.gov/myhealthfinder/api/v3/topicsearch.json?lang=en&topicId=539%2C34692%2C30604';
 
-      const response = await axios.get(apiUrl, {
-        headers: {
-          'X-Api-Key': API_KEY,
-        },
-      });
+      const response = await axios.get(apiUrl);
 
-      setNews(response.data.articles);
-      console.log(response.data.articles);
+      setNews(response.data.Result.Resources.Resource);
+      console.log(response.data.Result.Resources.Resource);
     } catch (error) {
       console.error('Error fetching news:', error);
     }

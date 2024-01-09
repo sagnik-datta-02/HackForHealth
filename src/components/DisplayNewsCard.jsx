@@ -14,38 +14,42 @@ import { Container, Link } from '@mui/material';
 
 export default function RecipeReviewCard(article) {
   const [liked, setLiked] = useState(false);
-
+console.log(article.article);
   const handleLikeClick = () => {
     setLiked(!liked);
   };
-
+  const content = article.article.Sections.section[0].Content;
+  const stripHtmlTags = (html) => {
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    return doc.body.textContent || '';
+  };
   return (
     <Container maxWidth='lg' style={{ background: '#EAFFF0' }}>
       <Card sx={{ minHeight:530 , maxWidth: 345 }}>
         <CardHeader
-          title={ article.article.title ? (
+          title={ article.article.Title ? (
             
-            article.article.title.length > 70
-              ? `${article.article.title.substring(0, 80)}...`
-              : article.article.title):( ''
+            article.article.Title.length > 70
+              ? `${article.article.Title.substring(0, 80)}...`
+              : article.article.Title):( ''
 
               )
           }
-          subheader={article.article.publishedAt}
+          
         />
-        <CardMedia component="img" height="194" image={article.article.urlToImage} alt="Image" />
+        <CardMedia component="img" height="194" image={article.article.ImageUrl} alt="Image" />
         <CardContent>
-        {article.article.description ? (
-            <Typography variant="body2" color="text.secondary">
-              {article.article.description.length > 120
-                ? `${article.article.description.substring(0, 120)}...`
-                : article.article.description}
-            </Typography>
-          ) : (
-            <Typography variant="body2" color="text.secondary">
-              No description available.
-            </Typography>
-          )}
+        {content ? (
+        <Typography variant="body2" color="text.secondary">
+          {content.length > 280
+            ? `${stripHtmlTags(content).substring(0, 280)}...`
+            : stripHtmlTags(content)}
+        </Typography>
+      ) : (
+        <Typography variant="body2" color="text.secondary">
+          No description available.
+        </Typography>
+      )}
         </CardContent>
         <CardActions disableSpacing>
           <IconButton
@@ -55,7 +59,7 @@ export default function RecipeReviewCard(article) {
           >
             {liked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
           </IconButton>
-          <Link href={article.article.url} target="_blank" rel="noopener noreferrer" underline="none">
+          <Link href={article.article.AccessibleVersion} target="_blank" rel="noopener noreferrer" underline="none">
             <IconButton aria-label="open in new window">
               <OpenInNewIcon />
             </IconButton>
