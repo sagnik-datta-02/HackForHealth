@@ -1,4 +1,5 @@
 import React, { useState, useEffect , useRef } from 'react';
+import {useNavigate} from 'react-router-dom'
 import { Paper, Typography, TextField, Button, List, ListItem, Container, Grid ,Select,
     MenuItem,
     InputLabel,} from '@mui/material';
@@ -11,15 +12,15 @@ function ChatBotApp() {
         //'How are you feeling today?',
     //'What is your favorite color?',
     //'Tell me about your day.',
-    "Are you feeling happy or sad. How often u feel so?",
-"What do you think about your future?"
-//"Do you feel like a failure?",
-//"How satisfied are you with things you used to enjoy?",
+    "Are you feeling happy or sad? How often u feel so?",
+"What do you think about future?"
+"Do you feel like a winner?",
+"How satisfied are you with things you used to enjoy?",
 //"How often do you feel guilty?"
 //,"Do you feel like you're being punished?"
 ,"How do you feel about yourself?"
 //,"Do you blame yourself for things?"
-//,"Do you have thoughts of killing yourself?"
+,"Do you have thoughts about living a long life?"
 //,"How often do you cry?"
 ,"How are you behaving with others usually nowadays?"
 //,"Have you lost interest in other people?"
@@ -28,7 +29,7 @@ function ChatBotApp() {
 //,"How well can you work compared to before?"
 //,"How well are you sleeping?"
 //,"Do you feel more tired than usual?"
-//,"How's your appetite compared to usual?"
+,"How's your appetite compared to usual?"
 //,"Have you lost weight recently?"
 ,"How worried are you about anything in last few days?"
 //,"Have you lost interest in sex?"
@@ -174,7 +175,7 @@ function ChatBotApp() {
         <Button
           variant="outlined"
           color="primary"
-          onClick={() => window.location.reload()} 
+          onClick={() => useNavigate("/")} 
         >
           Go to Home
         </Button>
