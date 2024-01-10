@@ -19,18 +19,18 @@ function TheraPedia() {
 
   const handleUserResponse = async (response) => {
     try {
-      // Treat both button clicks and text input as user messages
+      
       setMessageHistory((prevHistory) => [
         ...prevHistory,
         { message: response, isUser: true },
       ]);
-
-      if (clickableQuestionsAdded) {
-        // Handle the user clicking on a clickable question
+      
+      if (messageHistory!=null) {
+        
+     
         await handleClickableQuestionResponse(response);
       } else {
-        // Handle regular questions or other actions
-        // For demonstration, just moving to the next question
+       
         setCurrentQuestionIndex(currentQuestionIndex + 1);
       }
 
@@ -42,20 +42,18 @@ function TheraPedia() {
 
   const handleClickableQuestionResponse = async (response) => {
     try {
-      // Make an API call based on the user's response
+    
       const apiResponse = await axios.post('https://chatu-ehd7.vercel.app/chat/runChat', {
-        'userInput': response, // Use the clicked question as userInput
+        'userInput': response, 
       });
 
-      const answer = apiResponse.data.chatResponse; // Adjust this based on your API response structure
+      const answer = apiResponse.data.chatResponse; 
 
-      // Display the answer in the chat
       setMessageHistory((prevHistory) => [
         ...prevHistory,
         { message: answer, isUser: false },
       ]);
 
-      // Move to the next clickable question or action
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     } catch (error) {
       console.error('Error handling clickable question response:', error);
@@ -63,7 +61,7 @@ function TheraPedia() {
   };
 
   useEffect(() => {
-    // When the component mounts, display the clickable questions as buttons
+   
     if (!clickableQuestionsAdded) {
       setMessageHistory((prevHistory) => [
         ...prevHistory,
@@ -72,16 +70,17 @@ function TheraPedia() {
           { message: <Button key={index} onClick={() => handleUserResponse(question)}>{question}</Button>, isUser: false }
         )),
       ]);
-
+      console.log(clickableQuestionsAdded);
       setClickableQuestionsAdded(true);
     }
 
-    // Scroll to the bottom when a new message is added
+    
     if (listRef.current) {
       listRef.current.scrollTop = listRef.current.scrollHeight;
     }
     console.log(messageHistory);
     console.log(currentQuestionIndex);
+    console.log("here",clickableQuestionsAdded);
   }, [clickableQuestionsAdded]);
 
   return (
