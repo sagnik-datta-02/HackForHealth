@@ -11,6 +11,9 @@ const HeroSection = () => {
   const handleClick= () =>{
     navigate("/mental-health-test");
   }
+  const handleClickPage= () =>{
+    navigate("/therapedia");
+  }
   return (
     
     <Box style={{   position: 'relative' , background: '#EAFFF0', marginTop:'25px' ,   }}>
@@ -89,6 +92,7 @@ const HeroSection = () => {
              display: 'inline-flex',
              color: '#242424',
            }}
+           onClick={handleClickPage}
           >
             TheraPedia
           </Button>
