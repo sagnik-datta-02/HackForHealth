@@ -82,7 +82,7 @@ function TheraPedia() {
     }
     console.log(messageHistory);
     console.log(currentQuestionIndex);
-  }, [clickableQuestionsAdded, messageHistory]);
+  }, [clickableQuestionsAdded]);
 
   return (
     <Container maxWidth="md" style={{ marginTop: '40px' }}>
