@@ -226,7 +226,7 @@ function ChatBotApp() {
 
         <Grid container justifyContent="space-between" alignItems="center" marginBottom="20px">
           <Typography variant="h4" align="center">
-            Your Therapy {console.log(currentQuestionIndex, questions.length - 1)}
+            Your Therapy 
           </Typography>
           {currentQuestionIndex === questions.length && currentQuestionIndex != 0 && (
             <Button
