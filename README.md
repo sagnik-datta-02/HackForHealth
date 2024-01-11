@@ -1,6 +1,7 @@
 # Your Therapy
 
-Welcome to Your Therapy, a comprehensive mental health website designed to provide support and information through innovative features. This README file will guide you through the installation, prerequisites, and usage guidelines for the project.
+Welcome to Your Therapy is a comprehensive mental health website that provides support and information through innovative features. 
+This README file will guide you through the project's installation, prerequisites, and usage guidelines.
 
 ## Overview
 
@@ -8,11 +9,11 @@ Your Therapy is a multifaceted platform that incorporates two major features:
 
 1. **YourTherapy-Bot:**
    - **Multilingual Support:** Utilizing Azure Language Translator, YourTherapy-Bot supports 102 languages. Users can express themselves in their preferred language.
-   - **Sentiment Analysis:** Users are prompted with 10 psychological questions, and based on their responses, sentiment analysis is performed. This analysis, powered by the Distil BERT Language Model fine-tuned by Assembly Ai, helps identify the likelihood of the user experiencing depression.
+   - **Sentiment Analysis:** Users are prompted with 10 psychological questions from  the [Beck Depression Inventory (BDI)](https://en.wikipedia.org/wiki/Beck_Depression_Inventory), and based on their responses, sentiment analysis is performed. This analysis, powered by the Distil BERT Language Model fine-tuned by Assembly Ai, helps identify the likelihood of the user experiencing depression.
    - **Discreet Interaction:** With no registration or login required, conversations between the user and the bot remain discreet, thereby mitigating societal stigma.
 
 2. **TheraPedia:**
-   - **Health Literacy Enhancement:** TheraPedia is powered by Gemini AI (Google) and fine-tuned by our team. It provides insightful responses to user queries related to mental health, aiming to enhance health literacy.
+   - **Health Literacy Enhancement:** TheraPedia is powered by Gemini AI (Google) and fine-tuned by our team. It provides insightful responses to user queries about mental health, aiming to enhance health literacy.
    - **Multilingual Support:** TheraPedia offers responses in multiple languages, ensuring accessibility to a diverse user base.
 
 Additionally, Your Therapy provides a wealth of information through articles related to mental health, contributing to a holistic approach to mental well-being.
@@ -71,7 +72,7 @@ Ensure the following prerequisites are installed:
    Follow the backend setup instructions and start the server.
 
 3. **Access Your Therapy:**
-   Open your web browser and navigate to `http://localhost:3000`.
+   Open your web browser and navigate to `http://localhost:5143`.
 
 Feel free to explore and make the most of the various features and functionalities offered by Your Therapy.
 
@@ -88,4 +89,4 @@ Your Therapy relies on the following external dependencies to deliver its functi
 - [Distil BERT Language Model](https://huggingface.co/assemblyai/distilbert-base-uncased-sst2)
 - [Gemini AI](https://cloud.google.com/natural-language)
 
-Your Therapy is designed to be an inclusive and accessible platform for mental health support. If you encounter any issues or have suggestions, feel free to raise them in the [issue tracker](https://github.com/your-username/your-therapy/issues).
+Your Therapy is designed to be an inclusive and accessible platform for mental health support. If you encounter any issues or have suggestions, feel free to raise them in the [issue tracker](https://github.com/sagnik-datta-02/HackForHealth/issues).
