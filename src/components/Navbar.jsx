@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-
+import { useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
@@ -14,10 +14,11 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Menu } from '@mui/material';
 
-const pages = ['Home', 'About', 'Services', 'Contact'];
+const pages = ['Home', 'About', 'TheraPedia', 'YourTherapy-Bot'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
+  const navigate=useNavigate();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -28,11 +29,21 @@ function ResponsiveAppBar() {
     setAnchorElUser(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (page) => {
     setAnchorElNav(null);
+    // Handle navigation based on the clicked page
+    if (page === 'Home') {
+      navigate('/');
+    } else if (page === 'About') {
+      navigate('/');
+    } else if (page === 'TheraPedia') {
+      navigate('/therapedia');
+    } else if (page === 'YourTherapy-Bot') {
+      navigate('/mental-health-test');
+    }
   };
 
-  const handleCloseUserMenu = () => {
+  const handleCloseUserMenu = (page) => {
     setAnchorElUser(null);
   };
 
@@ -84,14 +95,14 @@ function ResponsiveAppBar() {
                 horizontal: 'left',
               }}
               open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+              onClose={() => handleCloseNavMenu()}
               sx={{
                 display: { xs: 'block', md: 'none' },
                 color: 'black',
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} onClick={() => handleCloseNavMenu(page)}>
                   <Typography textAlign="center" color='black' sx={{color: 'black'}}>{page}</Typography>
                 </MenuItem>
               ))}
@@ -120,7 +131,7 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => handleCloseNavMenu(page)}
                 sx={{ my: 2, color: 'Secendery', display: 'block' }}
               >
                 {page}
@@ -128,38 +139,7 @@ function ResponsiveAppBar() {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="#" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center"
-                  
-                  
-                  >{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+          
         </Toolbar>
       </Container>
     </AppBar>
