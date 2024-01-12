@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Menu } from '@mui/material';
 
-const pages = ['Home', 'About', 'TheraPedia', 'YourTherapy-Bot'];
+const pages = ['Home',  'TheraPedia', 'YourTherapy-Bot'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -33,8 +33,6 @@ function ResponsiveAppBar() {
     setAnchorElNav(null);
     // Handle navigation based on the clicked page
     if (page === 'Home') {
-      navigate('/');
-    } else if (page === 'About') {
       navigate('/');
     } else if (page === 'TheraPedia') {
       navigate('/therapedia');

@@ -34,7 +34,7 @@ const NewsDisplay = () => {
                     margin: '20px',
                     color: '#242424',
                     fontSize: { xs: '32px', sm: '64px' },
-                    fontFamily: 'Anek Telugu',
+                    fontFamily: 'Kanit, sans-serif',
                     fontWeight: '600',
                     textTransform: 'capitalize',
                     textAlign: 'center',

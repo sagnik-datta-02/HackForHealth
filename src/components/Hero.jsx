@@ -26,7 +26,7 @@ const HeroSection = () => {
             margin:'10px' ,
              color: '#242424',
              fontSize: { xs: '32px', sm: '64px' },
-             fontFamily: 'Anek Telugu',
+             fontFamily: 'Kanit, sans-serif',
              fontWeight: '600',
              textTransform: 'capitalize',
              lineHeight: { xs: 1.5, sm: '79.36' },
@@ -34,7 +34,7 @@ const HeroSection = () => {
              wordWrap: 'break-word',
            }}
           >
-            Your Therapy<br />Discreet & Anonymous<br />
+            Your Therapy<br />Discreet & Anonymous Mental Wellness Hub<br />
           </Typography>
           <Typography
             variant="body1"
@@ -42,13 +42,14 @@ const HeroSection = () => {
                 margin: '10px',
               color: '#242424',
               fontSize: { xs: '14px', sm: '16px' },
-              fontFamily: 'Anek Telugu',
+              fontFamily: 'Jost, sans-serif', 
               fontWeight: '400',
               letterSpacing: 0.32,
               wordWrap: 'break-word',
+              alignContent:'center'
             }}
           >
-            It is a completely anonymous platform to assess your own Mental Health and Help Yourself!
+           With a unique blend of cutting-edge technology and empathetic features, we provide a safe space for users to explore self-reflection, access expert insights, and receive support. Our multilingual YourTherapy-Bot employs advanced sentiment analysis to discreetly gauge emotional well-being, while TheraPedia, powered by Gemini AI, enriches health literacy with informative responses in 102 languages. Join us on a journey of self-discovery and empowerment as we break down barriers and foster a stigma-free environment for mental health conversations. Your well-being matters and Your Therapy is here for you.
           </Typography>
         
         

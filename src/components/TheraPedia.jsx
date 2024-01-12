@@ -85,8 +85,8 @@ function TheraPedia() {
 
   return (
     <Container maxWidth="md" style={{ marginTop: '40px' }}>
-      <Paper     elevation={3} style={{ margin: '20px', padding: '20px', height: 'auto', overflowY: 'auto' }}>
-        <Typography variant="h5" align="center">
+      <Paper  square={false}   elevation={3} style={{ margin: '20px', padding: '20px', height: 'auto', overflowY: 'auto' }}>
+        <Typography variant="h5" align="center" style={{fontFamily: 'Kanit, sans-serif',}}>
             TheraPedia - Your AI Mental Health Knowledge Hub powered by GEMINI AI
         </Typography>
         <List

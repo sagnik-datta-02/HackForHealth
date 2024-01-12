@@ -18,11 +18,13 @@ const ChatMessage = ({ message, isUser }) => {
   const userStyle = {
     backgroundColor: '#2DCF57',
     alignSelf: 'flex-end',
+    fontFamily: 'Jost, sans-serif',
   };
 
   const chatbotStyle = {
     backgroundColor: '#EAFFF0',
     alignSelf: 'flex-start',
+    fontFamily: 'Jost, sans-serif',
   };
 
   const messageTypeStyle = isUser ? userStyle : chatbotStyle;

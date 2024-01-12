@@ -26,7 +26,7 @@ console.log(article.article);
   return (
     <Container maxWidth='lg' style={{ background: '#EAFFF0' }}>
       <Card sx={{ minHeight:530 , maxWidth: 345 }}>
-        <CardHeader
+        <CardHeader style={{fontFamily: 'Kanit, sans-serif',}}
           title={ article.article.Title ? (
             
             article.article.Title.length > 70
@@ -34,13 +34,14 @@ console.log(article.article);
               : article.article.Title):( ''
 
               )
+            
           }
           
         />
         <CardMedia component="img" height="194" image={article.article.ImageUrl} alt="Image" />
         <CardContent>
         {content ? (
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="text.secondary" style={{fontFamily: 'Jost, sans-serif',}}>
           {content.length > 280
             ? `${stripHtmlTags(content).substring(0, 280)}...`
             : stripHtmlTags(content)}

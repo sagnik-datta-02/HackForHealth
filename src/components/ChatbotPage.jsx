@@ -222,10 +222,11 @@ function ChatBotApp() {
 
   return (
     <Container maxWidth="md" style={{ marginTop: '40px' }}>
-      <Paper elevation={3} style={{ margin: '20px', padding: '20px', height: 'auto', overflowY: 'auto' }}>
+      <Paper elevation={3} square={false} style={{ margin: '20px', padding: '20px', height: 'auto', overflowY: 'auto',  backdropFilter: 'blur(13.184196472167969px)',
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',}}>
 
         <Grid container justifyContent="space-between" alignItems="center" marginBottom="20px">
-          <Typography variant="h4" align="center">
+          <Typography variant="h4" align="center" style={{fontFamily: 'Kanit, sans-serif',}}>
             Your Therapy 
           </Typography>
           {currentQuestionIndex === questions.length && currentQuestionIndex != 0 && (
