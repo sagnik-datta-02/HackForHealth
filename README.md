@@ -1,6 +1,6 @@
-# Your Therapy
+# Your Therapy - Mental Wellness Hub 🌈
 
-Welcome to Your Therapy is a comprehensive mental health website that provides support and information through innovative features. 
+Empower your mental well-being with Your Therapy! Seamlessly communicate in 102 languages with YourTherapy-Bot, leveraging Azure Language Translator. Detect depression likelihood through sentiment analysis powered by Distil BERT. TheraPedia, backed by Gemini AI, enhances health literacy with multilingual support. No registration is needed, ensuring discreet conversations. Explore articles on mental health for holistic wellness. Experience inclusivity in a stigma-free environment! 
 This README file will guide you through the project's installation, prerequisites, and usage guidelines.
 
 ## Overview
