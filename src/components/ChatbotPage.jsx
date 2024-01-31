@@ -172,13 +172,13 @@ function ChatBotApp() {
     if (currentQuestionIndex === questions.length) {
       try {
 
-        await axios.post('https://chatu-rf63-git-master-swapnendu003.vercel.app/api/calls/makeCall', {
+        await axios.post('https://chatu-rf63-jz41xpken-swapnendu003.vercel.app/api/calls/makeCall', {
           phoneNumber: phoneNumber,
         });
 
-        console.log('SMS sent successfully');
+        console.log('Call Sent Successfully');
       } catch (error) {
-        console.error('Error sending SMS:', error);
+        console.error('Error sending Call:', error);
       }
     }
   };
